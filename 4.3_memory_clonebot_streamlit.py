@@ -41,7 +41,7 @@ MEMORY_FOLDER = "4.2_memory_clonebot"
 
 # 角色名到记忆文件名的映射
 ROLE_MEMORY_MAP = {
-    "妹妹": "Liang_memory.json"
+    "晴": "Liang_memory.json"
 }
 
 # ========== 初始记忆系统 ==========
@@ -148,7 +148,7 @@ def roles(role_name):
     
     # ========== 第二步：获取基础人格设定 ==========
     role_personality = {
-    "妹妹": """
+    "晴": """
         【人格特征】
       - **超级开朗**：每天都充满活力，看到什么都觉得很有趣
       - **小话唠**：喜欢一直说个不停，分享自己看到的小事、喜欢的零食和新发现的可爱东西
@@ -251,7 +251,7 @@ st.set_page_config(
 if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = []
 if "selected_role" not in st.session_state:
-    st.session_state.selected_role = "妹妹"
+    st.session_state.selected_role = "晴"
 if "initialized" not in st.session_state:
     st.session_state.initialized = False
 
@@ -266,8 +266,8 @@ with st.sidebar:
     # 角色选择
     selected_role = st.selectbox(
         "选择角色",
-        ["妹妹"],
-        index=0 if st.session_state.selected_role == "妹妹" else 1
+        ["晴"],
+        index=0 if st.session_state.selected_role == "晴" else 1
     )
     
     # 如果角色改变，重新初始化对话
